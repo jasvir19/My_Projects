@@ -34,9 +34,10 @@ public class RunPoker {
 			System.out.println("Input text file :" );
 			br=new BufferedReader(new FileReader(sc.next()));
 			while((text = br.readLine()) != null) {
-				text = text.replaceAll("\\s","");
-				str1 = text.substring(0,10);
-				str2 = text.substring(10,20);
+			//	text = text.replaceAll("\\s","");
+				str1 = text.substring(0,15);
+				str2 = text.substring(15,29);
+				/*
 				arr1[0] = str1.substring(0,2);
 				arr1[1] = str1.substring(2,4);
 				arr1[2] = str1.substring(4,6);
@@ -47,6 +48,9 @@ public class RunPoker {
 				arr2[2] = str2.substring(4,6);
 				arr2[3] = str2.substring(6,8);
 				arr2[4] = str2.substring(8,10);
+				*/
+				arr1=str1.split("\\s");
+				arr2=str2.split("\\s");
 				
 				rank1 = t.evalRank(arr1);
 				rank2 = t.evalRank(arr2);
